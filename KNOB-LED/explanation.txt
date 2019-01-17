@@ -1,0 +1,3 @@
+The color of the diode depends on three components. Red, green and blue. 
+This program allows you to choose a color by pressing D4 and D7
+and changing the value (brightness) of a particular color using a potentiometer.
