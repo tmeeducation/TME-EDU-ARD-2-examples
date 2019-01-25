@@ -98,19 +98,6 @@ void setup() {
 
   Serial.begin(9600); 
 
-  /* initialize WS2812 LED string*/
-  pixels.begin();
-  
-  c1 = random(cmax);
-  c2 = random(cmax);
-  c3 = random(cmax);
-
-  /* PCB backlight */
-  for(int k=1;k<NUMPIXELS;k++){
-    pixels.setPixelColor(k, pixels.Color(0,0,100));
-    pixels.show();
-  }
-
   /* initialize expander for 7-seg display */
   mcp.begin(0x4); // offset above 0x20 (lowest address)
   mcp.pinMode(0, OUTPUT);
@@ -147,17 +134,65 @@ void setup() {
   if( lcd.begin(LCD_COLS, LCD_ROWS)){
   }
 
-  lcd.print("   tme.eu ");
-//  lcd.setCursor(0, 1);
-//  lcd.print("Electronic components ");
+  lcd.print(" Welcome to");
+  lcd.setCursor(0, 1);
+  lcd.print(" TME EDUCATION ");
 
   /* OLED TEST */
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C, false);
-  delay(2000);
+  delay(100);
   display.clearDisplay();
-  display.setTextColor(WHITE);
+  delay(100);
+  
+  /* initialize WS2812 LED string*/
+  pixels.begin();
+  
+  for (int k=0; k<250; k++)
+  {
+    pixels.setPixelColor(1, pixels.Color(0,0,k));
+    pixels.setPixelColor(2, pixels.Color(0,0,k));
+    pixels.setPixelColor(3, pixels.Color(0,0,k));
+    pixels.setPixelColor(4, pixels.Color(0,0,k));
+    pixels.show();
+    delay(5);
+  }
+  for (int k=250; k>100; k--)
+  {
+    pixels.setPixelColor(1, pixels.Color(0,0,k));
+    pixels.setPixelColor(2, pixels.Color(0,0,k));
+    pixels.setPixelColor(3, pixels.Color(0,0,k));
+    pixels.setPixelColor(4, pixels.Color(0,0,k));
+    pixels.show();
+    delay(5);
+  }
+
+  digitalWrite(LED1, HIGH);
+  delay(333);
+  digitalWrite(LED1, LOW);
+  
+  digitalWrite(LED3_R, HIGH);
+  pixels.setPixelColor(0, pixels.Color(255,0,0));
+  pixels.show();
+  delay(333);
+
+  digitalWrite(LED3_R, LOW);
+  digitalWrite(LED3_G, HIGH);
+  pixels.setPixelColor(0, pixels.Color(0,255,0));
+  pixels.show();
+  delay(333);
+
+  digitalWrite(LED3_G, LOW);
+  digitalWrite(LED3_B, HIGH);
+  pixels.setPixelColor(0, pixels.Color(0,0,255));
+  pixels.show();
+  delay(333);
+  
+  digitalWrite(LED3_B, LOW);
+  pixels.setPixelColor(0, pixels.Color(0,0,0));
+  pixels.show();  
 
   /* draw UI on OLED */
+  display.setTextColor(WHITE);
   display.clearDisplay();
   display.setCursor(0,1);
   display.println("POTENTIOMETER:");
@@ -172,8 +207,14 @@ void setup() {
   display.drawRect(0, 10+15*1-1, 128, 5, 1);
   display.drawRect(0, 10+15*2-1, 128, 5, 1);
   display.drawRect(0, 10+15*3-1, 128, 5, 1);
-  display.display();    
+  display.display(); 
+
+  delay(1000);
+  lcd.clear();
 }
+
+
+
 void loop() {
 
   int ctemp;
@@ -220,13 +261,14 @@ void loop() {
     Serial.print("%, L: "); Serial.print(clight);
     Serial.print("%, T: "); Serial.print(ctemp);Serial.print("*C\n");
 
-//    /* LCD */
-      lcd.clear();
-      lcd.print("R: "); lcd.print(crot); lcd.print("%");
-      lcd.setCursor(8, 0);
-      lcd.print("L: "); lcd.print(clight); lcd.print("%");
-      lcd.setCursor(0, 1);
-      lcd.print("T: "); lcd.print(ctemp); lcd.print((char)223); lcd.print("C");
+    /* LCD */
+ 
+    lcd.setCursor(0, 0);
+    lcd.print("R: "); lcd.print(crot); lcd.print("%  ");
+    lcd.setCursor(8, 0);
+    lcd.print("L: "); lcd.print(clight); lcd.print("%  ");
+    lcd.setCursor(0, 1);
+    lcd.print("T: "); lcd.print(ctemp); lcd.print((char)223); lcd.print("C  ");
 
     /* OLED */
     int proc;    
@@ -242,18 +284,37 @@ void loop() {
 
     
     /* show first digit of potentiometer value on 7-segment display */
-    int temp = (int)((float)analogRead(ROT)/102.3);
+    int temp = (int)((float)analogRead(ROT)/101);
     for (int j=0; j<8; j++) 
       mcp.digitalWrite(j, (bool)bitRead(seg7[temp], 7-j));
     
 
     /* WS2812 */
+    crot = analogRead(ROT);
+ 
+  if (crot < 341)  // Lowest third of the potentiometer's range (0-340)
+  {                  
+    crot = (crot * 3) / 4; // Normalize to 0-255
+    c1 = 255 - crot;  // Red from full to off
+    c2 = crot;        // Green from off to full
+    c3 = 1;             // Blue off
+  }
+  else if (crot < 682) // Middle third of potentiometer's range (341-681)
+  {
+    crot = ( (crot-341) * 3) / 4; // Normalize to 0-255
+    c1 = 1;            // Red off
+    c2 = 255 - crot; // Green from full to off
+    c3 = crot;       // Blue from off to full
+  }
+  else  // Upper third of potentiometer"s range (682-1023)
+  {
+    crot = ( (crot-683) * 3) / 4; // Normalize to 0-255
+    c1 = crot;       // Red from off to full
+    c2 = 1;            // Green off
+    c3 = 255 - crot; // Blue from full to off
+  }
     pixels.setPixelColor(0, pixels.Color(c1,c2,c3));
     pixels.show();
-    // set random color
-    if ((random(2) && (c1 < (cmax-1))) || (c1 == 0)) c1+=1; else c1-=1;
-    if ((random(2) && (c2 < (cmax-1))) || (c2 == 0)) c2+=1; else c2-=1;
-    if ((random(2) && (c3 < (cmax-1))) || (c3 == 0)) c3+=1; else c3-=1;
 
     if (rc5.read(&tog, &addr, &cmd))
       {
