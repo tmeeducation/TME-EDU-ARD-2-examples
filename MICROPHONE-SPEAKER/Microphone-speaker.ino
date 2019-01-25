@@ -5,8 +5,8 @@
  *  The program makes it possible to read data from the microphone and represent them using the speaker.
  */ 
  
-#define PROJECT_NAME "Template"
-#define VERSION "v0.0.0"
+#define PROJECT_NAME "Microphone-Speaker"
+#define VERSION "v0.1.0"
 
 #include "includes.h"
 ////////CONSTANTS////////
