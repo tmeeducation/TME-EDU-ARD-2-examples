@@ -36,7 +36,7 @@ void setup(){
   //and then the color values in the order of red, green, blue. We choose color values from 0 to 255.
   //TIP: Arguments for the setPixelColor function: setPixelColor(pixelNumber, red, green, blue);
   for(int i = 0; i < LED_COUNT; i++)
-    ledStrip.setPixelColor(0, 5, 10, 20);
+    ledStrip.setPixelColor(i, 5, 10, 20);
   
   //the show method starts the set color
   ledStrip.show();
