@@ -305,12 +305,14 @@ void testIRSensor(){
   display.fillRoundRect(85, 0, 30, 64, 0, 0);
 
   if(digitalRead(IR_SENSOR)){
-    display.fillCircle(40, 31, 8, 1);
-    digitalWrite(LED, HIGH);
-  }else{
-     display.fillCircle(40, 31, 8, 0);
+      display.fillCircle(40, 31, 8, 0);
     display.drawCircle(40, 31, 8, 1);
     digitalWrite(LED, LOW);
+   
+  }else{
+     display.fillCircle(40, 31, 8, 1);
+    digitalWrite(LED, HIGH);
+   
    
   }
   display.fillRoundRect(0, 0, 40, 64, 0, 0);
