@@ -15,7 +15,9 @@
 //In this section, all constants resulting from the prototype board design are set
 #define KEY_CENTER 8
 #define BUZZER 2
-
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define RESET_BTN 4
 ////////MODIFIERS////////
 //In this section there are constants whose modification will affect the operation of our plate
 
@@ -23,7 +25,7 @@
 ////////DECLARATIONS////////
 //This section prepares variables that are responsible for the individual components on the board
 hd44780_I2Cexp lcd(0x20, I2Cexp_MCP23008, 7, 6, 5, 4, 3, 2, 1, HIGH);
-Adafruit_SSD1306 display(0);
+Adafruit_SSD1306 display(SCREEN_WIDTH,SCREEN_HEIGHT, &Wire, RESET_BTN);
 Adafruit_MCP23008 seg;
 
 
