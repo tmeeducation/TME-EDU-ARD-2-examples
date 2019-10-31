@@ -37,4 +37,9 @@ void loop(){
   
   Serial.print(light);
   Serial.println("%");
+  lcd.setCursor (0,0);
+  lcd.print (light);
+  lcd.print ("%");
+  delay (100);
+  
 }

@@ -86,7 +86,7 @@ void loop(){
   }
   ledStrip.show();
 }
-
+}
 
 
 
