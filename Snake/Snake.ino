@@ -32,7 +32,7 @@
 ////////DECLARATIONS////////
 //This section prepares variables that are responsible for the individual components on the board
 hd44780_I2Cexp lcd(0x20, I2Cexp_MCP23008, 7, 6, 5, 4, 3, 2, 1, HIGH);
-Adafruit_SSD1306 display(0);
+Adafruit_SSD1306 display(DISPLAY_WIDTH, DISPLAY_HEIGHT, &Wire, 4);
 
 uint8_t headX = 4;
 uint8_t headY = 4;

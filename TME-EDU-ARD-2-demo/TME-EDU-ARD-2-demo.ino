@@ -28,8 +28,11 @@
 #include <SPI.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define RESET_BTN 4
 
-Adafruit_SSD1306 display(0);
+Adafruit_SSD1306 display(SCREEN_WIDTH,SCREEN_HEIGHT, &Wire, RESET_BTN);
 //#define LOGO16_GLCD_HEIGHT 16 
 //#define LOGO16_GLCD_WIDTH  16 
 
@@ -337,5 +340,3 @@ void draw_bar(int line, int p, int col) {
   display.fillRect(1, 10+15*(line-1), split, 3, 1);
   display.fillRect(split+1, 10+15*(line-1), display.width()-2-split, 3, 0);
 }
-
-

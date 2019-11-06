@@ -17,6 +17,7 @@
 #define KEY_CENTER 8
 #define POTENTIOMETER 1
 #define BUZZER 2
+#define RESET_BTN 4
 
 ////////MODIFIERS////////
 //In this section there are constants whose modification will affect the operation of our plate
@@ -34,7 +35,7 @@
 ////////DECLARATIONS////////
 //This section prepares variables that are responsible for the individual components on the board
 hd44780_I2Cexp lcd(0x20, I2Cexp_MCP23008, 7, 6, 5, 4, 3, 2, 1, HIGH);
-Adafruit_SSD1306 display(0);
+Adafruit_SSD1306 display(DISPLAY_WIDTH,DISPLAY_HEIGHT, &Wire, RESET_BTN);
 
 const uint8_t loadedPickupBitmap[] PROGMEM = {0x3f,0x80, 0x22,0x9C, 0x42,0xBE, 0xBE,0xFF, 0x82,0x01, 0x82,0x01, 0x7F,0xFF, 0x38,0x1C};
 const uint8_t pickupBitmap[] PROGMEM = {0x3f,0x80, 0x22,0x80, 0x42,0x80, 0xBE,0xFF, 0x82,0x01, 0x82,0x01, 0x7F,0xFF, 0x38,0x1C};

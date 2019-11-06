@@ -6,6 +6,9 @@
  */ 
 #define PROJECT_NAME "LogoTmeEdu"
 #define VERSION "v0.2.0"
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define RESET_BTN 4
 
 #include "includes.h"
 #include "graphics/logoTmeEducation.h"
@@ -18,7 +21,7 @@
 ////////DECLARATIONS/////
 //This section prepares variables that are responsible for the individual components on the board
 hd44780_I2Cexp lcd(0x20, I2Cexp_MCP23008, 7, 6, 5, 4, 3, 2, 1, HIGH);
-Adafruit_SSD1306 display(0);
+Adafruit_SSD1306 display(SCREEN_WIDTH,SCREEN_HEIGHT, &Wire, RESET_BTN);
 
 void setup(){
   lcd.begin(16, 2);
