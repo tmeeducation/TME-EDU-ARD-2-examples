@@ -1,4 +1,4 @@
-# DEMO LED 
+# ![](https://place-hold.it/160x25/FFFFFF/0611FA&text=DEMO-LED&bold&fontsize=25)
 
 *One of the most complex projects, that combines between the LCD display, the programmable LEDs, pushbuttons, microphone, and seven segment display.* 
 
