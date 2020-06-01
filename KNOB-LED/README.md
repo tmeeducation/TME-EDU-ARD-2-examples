@@ -1,4 +1,4 @@
-### **KNOB-LED**
+# ![](https://place-hold.it/140x39/FFFFFF/3B7147&text=KNOB_LED&bold&fontsize=23)
 (Adjust the Neopixels LEDs brightness by using the potentiometer)
 
 ![knob led](https://user-images.githubusercontent.com/37689522/53181485-ecf23000-35f7-11e9-90bb-90124532686d.gif)
