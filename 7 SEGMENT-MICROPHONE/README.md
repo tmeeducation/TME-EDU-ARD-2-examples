@@ -1,4 +1,4 @@
-## ![](https://place-hold.it/333x25/FFFFFF/296479&text=7_SEGMENT_-_MICROPHONE&fontsize=18)
+## ![](https://place-hold.it/299x25/FFFFFF/296479&text=7_SEGMENT_-_MICROPHONE&bold&fontsize=18)
 
 *(Create a finger tapping counter- sounds FUN!)*
 
