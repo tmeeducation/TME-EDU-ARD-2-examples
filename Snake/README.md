@@ -1,4 +1,4 @@
-## ![](https://place-hold.it/144x25/FFFFFF/DF205F&text=SNAKE_GAME&fontsize=18)
+## ![](https://place-hold.it/200x39/FFFFFF/DF205F/22AAC2&text=SNAKE_GAME&bold&fontsize=23)
 
 ***Have you ever played snake game?***
 
