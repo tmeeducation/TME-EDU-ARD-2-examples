@@ -1,6 +1,7 @@
 # TME EDU LOGO
 
-*Display images/Logo on OLED*
+<span style="color: green;">*Display images/Logo on OLED*</span>.
+
 
 With this project, you can interface Arduino UNO with OLED monochrome screen and display your Logo or images.
 
