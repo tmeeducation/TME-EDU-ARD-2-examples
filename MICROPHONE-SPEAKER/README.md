@@ -1,4 +1,4 @@
-# ![](https://place-hold.it/280x25/FFFFFF/532F4E/6FEB18&text=MICROPHONE_SPEAKER&bold&fontsize=18)
+# ![](https://place-hold.it/333x39/FFFFFF/532F4E/E326FA&text=MICROPHONE_SPEAKER&bold&fontsize=23)
 
 (Use the microphone and Buzzer to create a sound level sensor)
 
