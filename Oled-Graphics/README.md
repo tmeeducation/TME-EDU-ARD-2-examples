@@ -1,4 +1,4 @@
-# OLED Graphics
+# ![](https://place-hold.it/223x39/FFFFFF/A08AB4/0D077E&text=OLED_GRAPHICS&bold&fontsize=23)
 
 _Learn how to use Arduino to create animations with OLED._
 
