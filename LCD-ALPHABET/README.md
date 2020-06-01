@@ -1,4 +1,4 @@
- # ![](https://place-hold.it/228x40/FFFFFF/22A6C9&text=LCD-ALPHABET&bold&fontsize=23)
+ # ![](https://place-hold.it/228x40/FFFFFF/22A6C9/381715&text=LCD-ALPHABET&bold&fontsize=23)
 (Learn how to encode characters in Arduino using ASCII code)
 
 ![lcd alphabet](https://user-images.githubusercontent.com/37689522/53419872-ee966c00-39da-11e9-9b9a-1a3dbd01c463.gif)
