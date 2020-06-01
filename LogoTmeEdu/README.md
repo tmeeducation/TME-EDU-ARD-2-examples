@@ -1,4 +1,4 @@
-# TME EDU LOGO
+# ![](https://place-hold.it/233x39/FFFFFF/F53D96/1D76EF&text=TME_EDU_LOGO&bold&fontsize=23)
 
 *Display images/Logo on OLED*
 
