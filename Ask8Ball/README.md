@@ -1,4 +1,4 @@
-## ![](https://place-hold.it/333x35/FFFFFF/FAB706&text=ASK_THE_MAGIC_8BALL&fontsize=23)
+## ![](https://place-hold.it/333x39/FFFFFF/FAB706/15219C&text=ASK_THE_MAGIC_8BALL&bold&fontsize=23)
 
 ***Finally! uncover the mystery of the magic crystal ball***
 
