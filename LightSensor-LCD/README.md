@@ -1,4 +1,4 @@
-### **LIGHT SENSOR- LCD**
+# ![](https://place-hold.it/280x39/FFFFFF/82CF0D/F5795D&text=LIGHT_SENSOR-LCD&bold&fontsize=23)
 (Measure the light intensity and display it on the LCD screen)
 
 ![light sensor lcd](https://user-images.githubusercontent.com/37689522/53425591-9e70d700-39e5-11e9-9a46-a3c1b7fc9b60.gif)
