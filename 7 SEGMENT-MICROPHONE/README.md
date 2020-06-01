@@ -1,6 +1,6 @@
-**7 SEGMENT- MICROPHONE**
+## 7 SEGMENT- MICROPHONE 
 
-(Create a finger tapping counter- sounds FUN!)
+*(Create a finger tapping counter- sounds FUN!)*
 
 ![7seg mic](https://user-images.githubusercontent.com/37689522/53419157-9ad75300-39d9-11e9-9c9f-6329007fa226.gif)
 
