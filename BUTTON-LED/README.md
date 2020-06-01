@@ -1,4 +1,4 @@
-# ![](https://place-hold.it/190x25/FFFFFF/0611FA&text=BUTTON-LED&bold&fontsize=22)
+# ![](https://place-hold.it/190x39/FFFFFF/0611FA/FF00A2&text=BUTTON-LED&bold&fontsize=25)
 (Use the push buttons to control the Neopixels LEDs)
 
 
