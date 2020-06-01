@@ -1,4 +1,4 @@
-### **Microphone-Speaker** 
+# ![](https://place-hold.it/333x25/FFFFFF/532F4E/79E230&text=MICROPHONE_SPEAKER&bold&fontsize=18)
 (Use the microphone and Buzzer to create a sound level sensor)
 
 ![mic speaker](https://user-images.githubusercontent.com/37689522/53421795-8fd2f180-39de-11e9-9a41-38020bf4bb90.gif)
