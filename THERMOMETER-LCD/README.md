@@ -1,5 +1,5 @@
 # ![](https://place-hold.it/280x39/FFFFFF/166447/FF0404&text=THERMOMETER-LCD&bold&fontsize=23)
-*Use the temperature sensor to make a digital Thermometer*
+***Use the temperature sensor to make a digital Thermometer***
 
 ![thermometer lcd](https://user-images.githubusercontent.com/37689522/53480047-a62e8b00-3a7a-11e9-9ffd-a08245c62567.gif)
 
