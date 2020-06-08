@@ -6,6 +6,6 @@
 
 If you know how to display a single graphic on OLED, then it will be easy for you to make animations!
 
-Because one Animation consists of few graphics displayed one after another at a high speed. 
+Because Animations consist of few graphics displayed one after another at a high speed. 
 
 ***That’s it!***
