@@ -69,16 +69,16 @@ void count(int digit){
       data = B11011010;
       break;
     case 3:
-      data = B01110011;
+      data = B11110010;
       break;
     case 4:
       data = B01100110;
       break;
     case 5:
-      data = B10100100;
+      data = B10110110;
       break;
     case 6:
-      data = B11011110;
+      data = B10111110;
       break;
     case 7:
       data = B11100000;
@@ -95,4 +95,3 @@ void count(int digit){
   for(int i = 0; i < 8; i++)
     seg.digitalWrite(i, bitRead(data, 7 - i));
 }
-
